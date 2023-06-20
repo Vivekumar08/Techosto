@@ -60,6 +60,6 @@
 4. Time Entry Collection:
     - POST /v1/time-entry: Create a new time entry.
     - GET /v1/time-entry: Get all time entries.
-    - GET /v1/time-entry/:id: Get a specific time entry by its ID.
+    - GET /v1/time-entry/:id/: Get a specific time entry by its ID.
     - PUT /v1/time-entry/:id/choose-tasks: Choose a task for specific time entry by its ID.
-    - DELETE /v1/time-entry/:id: Delete a specific time entry by its ID.
+    - DELETE /v1/time-entry/:id/: Delete a specific time entry by its ID.
