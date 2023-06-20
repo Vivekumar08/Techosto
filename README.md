@@ -1,10 +1,10 @@
 # Techosto Backend Development (Node.js)
 
 # Tech Stack
-Language: Node v14+
-Database: MongoDB
-ORM: MongoDB Native Driver
-Library: UUID and MongoDB ObjectID to generate unique IDs.
+- Language: Node v14+
+- Database: MongoDB
+- ORM: MongoDB Native Driver
+- Library: UUID and MongoDB ObjectID to generate unique IDs.
 
 # Models
 
@@ -45,21 +45,21 @@ Library: UUID and MongoDB ObjectID to generate unique IDs.
 # API Endpoints
 
 1. User Collection:
-    POST /v1/auth/signup: Create a new user.
-    POST /v1/auth/signin: Sign in an existing user.
-    GET /v1/auth/me: Get the user information for the authenticated user.
+    - POST /v1/auth/signup: Create a new user.
+    - POST /v1/auth/signin: Sign in an existing user.
+    - GET /v1/auth/me: Get the user information for the authenticated user.
 
 2. Project Collection:
-    POST /api/projects: Create a new project.
-    GET /api/projects: Get all projects.
+    - POST /api/projects: Create a new project.
+    - GET /api/projects: Get all projects.
     
 3. Task Collection:
-    POST /api/tasks: Create a new task with associated log time.
-    GET /api/tasks: Get all tasks.
+    - POST /api/tasks: Create a new task with associated log time.
+    - GET /api/tasks: Get all tasks.
     
 4. Time Entry Collection:
-    POST /api/time-entry: Create a new time entry.
-    GET /api/time-entry: Get all time entries.
-    GET /api/time-entry/:id: Get a specific time entry by its ID.
-    PUT /api/time-entry/:id: Update a specific time entry by its ID.
-    DELETE /api/time-entry/:id: Delete a specific time entry by its ID.
+    - POST /api/time-entry: Create a new time entry.
+    - GET /api/time-entry: Get all time entries.
+    - GET /api/time-entry/:id: Get a specific time entry by its ID.
+    - PUT /api/time-entry/:id: Update a specific time entry by its ID.
+    - DELETE /api/time-entry/:id: Delete a specific time entry by its ID.
