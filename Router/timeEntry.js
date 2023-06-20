@@ -71,6 +71,8 @@ TimeEntryRouter.post('/', auth, async (req, res) => {
             startTime,
             endTime: finalEndTime,
             timeSpent,
+            billable: false,
+            billed: false,
             tasks: [],
             created_at: new Date(),
             updated_at: new Date()
@@ -139,7 +141,7 @@ TimeEntryRouter.put('/:id/choose-tasks', auth, async (req, res) => {
             { $set: { tasks: tasks, updated_at: new Date() } }
         );
 
-        if (result.modifiedCount === 0) {
+        if (!result.value) {
             res.status(404).json({ error: 'Time entry not found' });
             return;
         }

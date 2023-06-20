@@ -13,12 +13,12 @@
     - email (String, required, unique)
     - password (String, required)
     
-3. Projects:
+2. Projects:
       - name (String, required)
       - description (String, required)
       - userId (ObjectId, required, reference to User)
       
-5. Tasks:
+3. Tasks:
       - name (String, required)
       - description (String, required)
       - projectId (ObjectId, required, reference to Project)
@@ -28,7 +28,7 @@
         - hours (Number, required)
         - minutes (Number, required)
      
-7. Time-entries:
+4. Time-entries:
      - projectId (ObjectId, required, reference to Project)
      - taskId (ObjectId, required, reference to Task)
      - userId (ObjectId, required, reference to User)
