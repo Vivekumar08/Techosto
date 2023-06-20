@@ -50,16 +50,16 @@
     - GET /v1/auth/me: Get the user information for the authenticated user.
 
 2. Project Collection:
-    - POST /api/projects: Create a new project.
-    - GET /api/projects: Get all projects.
+    - POST /v1/projects: Create a new project.
+    - GET /v1/projects: Get all projects.
     
 3. Task Collection:
-    - POST /api/tasks: Create a new task with associated log time.
-    - GET /api/tasks: Get all tasks.
+    - POST /v1/tasks: Create a new task with associated log time.
+    - GET /v1/tasks: Get all tasks.
     
 4. Time Entry Collection:
-    - POST /api/time-entry: Create a new time entry.
-    - GET /api/time-entry: Get all time entries.
-    - GET /api/time-entry/:id: Get a specific time entry by its ID.
-    - PUT /api/time-entry/:id: Update a specific time entry by its ID.
-    - DELETE /api/time-entry/:id: Delete a specific time entry by its ID.
+    - POST /v1/time-entry: Create a new time entry.
+    - GET /v1/time-entry: Get all time entries.
+    - GET /v1/time-entry/:id: Get a specific time entry by its ID.
+    - PUT /v1/time-entry/:id/choose-tasks: Choose a task for specific time entry by its ID.
+    - DELETE /v1/time-entry/:id: Delete a specific time entry by its ID.
