@@ -90,6 +90,26 @@ TimeEntryRouter.post('/', auth, async (req, res) => {
     }
 });
 
+//  Get a specific time entry by its ID.
+TimeEntryRouter.get('/:id', async (req, res) => {
+    try {
+        const timeEntryId = req.params.id;
+
+        const db = await connectToDatabase();
+        const TimeEntryCollection = db.collection('time-entries')
+
+        const timeEntry = await TimeEntryCollection.findOne({ _id: new ObjectId(timeEntryId) });
+        if (!timeEntry) {
+            res.status(404).json({ error: 'Time entry not found' });
+            return;
+        }
+        res.json(timeEntry);
+    } catch (err) {
+        console.error('Error retrieving time entry:', err);
+        res.status(500).json({ error: 'Failed to retrieve time entry' });
+    }
+})
+
 // Get All Time Entry 
 TimeEntryRouter.get('/', auth, async (req, res) => {
     try {
